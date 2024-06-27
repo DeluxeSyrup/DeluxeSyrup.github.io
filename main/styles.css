@@ -1,0 +1,232 @@
+body {
+  background-color: #1a1a1a;
+  color: #ff69b4;
+  font-family: 'Courier New', Courier, monospace;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #2a2a2a;
+  border-bottom: 2px solid #ff69b4;
+}
+
+.nav-left {
+  font-size: 1.2em;
+}
+
+.nav-left a {
+  color: #ff69b4;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+.nav-left a:hover {
+  text-decoration: underline;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.nav-right a {
+  margin-right: 10px;
+}
+
+.section {
+  padding: 20px;
+  margin: 20px auto;
+  background-color: #2a2a2a;
+  border: 2px solid #ff69b4;
+  width: 80%;
+  max-width: 600px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.fake-nav {
+  background-color: #ff69b4;
+  color: #1a1a1a;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom:  solid #ff69b4;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.close-btn {
+  cursor: default;
+}
+
+.gallery {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  margin-top: 40px; /* Adjust for fake nav bar */
+}
+
+.gallery img {
+  margin: 10px;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border: 2px solid #ff69b4;
+}
+
+#latestActivity {
+  position: relative;
+}
+
+#latestActivity .fake-nav {
+  background-color: #ff69b4;
+  color: #1a1a1a;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #ff69b4;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1; /* Ensure it stays above other content */
+}
+
+.activity-container {
+  max-height: 180px; /* Adjust height as needed */
+  overflow-y: scroll;
+  
+}
+
+.activity {
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+}
+
+.activity-date {
+  font-size: 0.9em;
+  color: #666;
+}
+
+.activity-title {
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.activity-description {
+  font-size: 1em;
+  color: #ff0000;
+}
+
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #333;
+  color: #ff69b4;
+  border-top: 2px solid #ff69b4;
+}
+
+.footer-content {
+  text-align: center;
+}
+
+.footer-logo {
+  width: 88px;
+  height: 31px;
+  margin-bottom: 10px;
+}
+
+.footer-text h2 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.footer-text p {
+  margin: 5px 0;
+  font-size: 1em;
+}
+
+.footer-text a {
+  color: #ff69b4;
+  text-decoration: none;
+}
+
+.footer-text a:hover {
+  text-decoration: underline;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-right {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 10px;
+  }
+
+  .nav-right .icon,
+  .nav-right button {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .section {
+    width: 90%;
+  }
+
+  .gallery img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Webkit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a; /* Background color of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ff69b4; /* Pink color for the scrollbar thumb */
+  border-radius: 6px;
+  border: 3px solid #1a1a1a; /* Padding around the thumb */
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #ff69b4 #1a1a1a; /* thumb color, track color */
+}

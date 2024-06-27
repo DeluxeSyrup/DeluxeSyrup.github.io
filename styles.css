@@ -1,0 +1,27 @@
+body {
+  background-color: black;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  transition: opacity 1s ease-out; /* Smooth transition */
+  margin: 0;
+  padding: 0;
+}
+
+body.fade-out {
+  opacity: 0;
+}
+
+#loadingScreen {
+  white-space: pre;
+  padding: 20px;
+  max-width: 100%;
+  overflow-wrap: break-word; /* Ensure long lines break properly */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #loadingScreen {
+    padding: 10px;
+    font-size: 0.9em; /* Slightly smaller text for better fit */
+  }
+}
