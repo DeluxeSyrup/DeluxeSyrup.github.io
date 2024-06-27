@@ -12,7 +12,7 @@ const messages = [
   "Peripherals: 1 Keyboard, 1 Mouse",
   "Operating System: MS-DOS 6.22",
   "Booting from Hard Disk...",
-  "C:> Syru_pc"
+  "C:> Syrup_pc"
 ];
   
   const loadingScreen = document.getElementById('loadingScreen');
