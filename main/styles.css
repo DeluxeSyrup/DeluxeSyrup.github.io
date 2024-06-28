@@ -63,6 +63,11 @@ nav {
     position: relative;
 }
 
+.section a {
+    color: #ff69b4;
+    text-decoration: none;
+}
+
 .fake-nav {
     background-color: #ff69b4;
     color: #1a1a1a;
@@ -91,7 +96,7 @@ nav {
 
 .gallery img {
     margin: 10px;
-    width: 200px;
+    width: 40%;
     height: 200px;
     object-fit: cover;
     border: 2px solid #ff69b4;
